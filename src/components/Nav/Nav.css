@@ -1,0 +1,121 @@
+/* Navbar.css */
+
+.app__navbar {
+    width: 100%;
+    display: flex;
+    color:rgb(248, 252, 27);
+    justify-content: space-between;
+    align-items: center;
+    background: #072e33;
+    padding: .1rem .1rem;
+    
+}
+.headtext__cormorant {
+    font-family: 'Cormorant Upright', serif;
+    color: #ffd901;
+    font-size: 8px;
+    line-height: 8px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+  }
+.p__opensans {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    line-height: 8px;
+    font-size: 4px;
+  }
+.app__navbar-links {
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__navbar-links li {
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.app__navbar-links li:hover {
+    color: #00293d;
+}
+
+.app__navbar-login a:hover {
+    border-bottom: 1px solid #f1b613;
+}
+
+.app__navbar-login div {
+    width: 1px;
+    height: 30px;
+    background: #00293d;
+}
+
+.app__navbar-smallscreen {
+    display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    transition: .5s ease;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+    font-size: 27px;
+    color: #f1b613;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.app__navbar-smallscreen_links {
+    list-style: none;
+}
+
+.app__navbar-smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    color: #f1b613;
+    font-size: 2rem;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.app__navbar-smallscreen_links li:hover {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-smallscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar {
+        padding: 1rem;
+    }
+
+}
